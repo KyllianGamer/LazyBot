@@ -1,0 +1,11 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (client, message, args) => {
+
+    // Runs code here.
+
+}
+
+module.exports.help = {
+    name: "EXAMPLE"
+}
