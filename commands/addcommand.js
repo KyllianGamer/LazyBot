@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     cmds[args[0]] = message.content.slice(10 + args[0].length);
 
     fs.writeFileSync('./commands.json', JSON.stringify(cmds));
-
+    message.reply("command added.");
 }
 
 module.exports.help = {
