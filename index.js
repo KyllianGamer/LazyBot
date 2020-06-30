@@ -17,7 +17,6 @@ fs.readdir("./commands/", (err, files) => {
         console.log(`Command ${f} has been loaded.`);
         client.commands.set(file.help.name, file);
     });
-
 });
 
 client.on("ready", async () => {
