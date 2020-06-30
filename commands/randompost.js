@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 
     const memeEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
-        .setImage(meme)
+        .setImage(post)
         .setTitle(`POST`)
         .setFooter(`/r/${args[0]}`);
 
