@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 
     if (message.channel.id != "727488241954979886") return;
 
-    const sub = subReddits(Math.floor(Math.random() * subReddits.length));
+    const sub = subReddits[Math.floor(Math.random() * subReddits.length)];
     const meme = await randomPup(sub);
 
     const memeEmbed = new Discord.MessageEmbed()
