@@ -6,8 +6,6 @@ const config = require("./config.json");
 
 client.commands = new Discord.Collection();
 
-const customCommands = require("./commands/commands.json");
-
 fs.readdir("./commands/", (err, files) => {
 
     if(err) console.log(err);
@@ -34,8 +32,6 @@ client.on('message', async message => {
 
     var command = client.commands.get(cmd.slice(config.prefix.length));
     if (command) return command.run(client, message, args);
-
-    if (customCommands[cmd]) message.reply(customCommands[cmd]);
 });
 
 client.login(process.env.token);
